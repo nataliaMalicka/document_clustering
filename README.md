@@ -1,6 +1,6 @@
 # document_clustering
 
-Explored data clustering techniques including:
+Implemented and evaluated various data clustering techniques, including:
 
 **WordCloud:**
 
