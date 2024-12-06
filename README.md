@@ -1,7 +1,7 @@
 # NLP - Document Clustering and Topic Modeling
 *Completed as part of a course in Applied Machine Learning.
 
-Analyzing 14,162 rows of text at first glance – the sheer volume of text can quickly become a tangled mess or a word soup; and can be challenging to navigate. Luckily there are a plethora of tools at our disposal created by seasoned data scientists and linguists – DBScan, KMeans, NearestNeighbours, CountVectorizer, SentenceTransformer, and Hierarchical Clustering.
+Analyzing 14,162 rows of text at first glance – the sheer volume of text can quickly become a tangled mess or a word soup; and can be challenging to navigate. Luckily there are a plethora of tools at our disposal created by seasoned data scientists and linguists – DBScan, KMeans, NearestNeighbours, SentenceTransformer, and Hierarchical Clustering.
 
 **Initial EDA – Exploratory Data Analysis**
 
