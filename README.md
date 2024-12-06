@@ -38,12 +38,17 @@ Using a model based on the density of clusters rather than simply average distan
 
 ![image](https://github.com/user-attachments/assets/ea9aa72a-f6e2-49dc-80c6-23c24ca18a90)
 
-**Hierarchical** clusters tuned in combination of visual dendrogram and fcluster method. 
-I pruned the dendrogram to the lastp = 12 clusters, which cut off clusters at the top 12 branches. I tried different values of fcluster, and tried to tune it to around the top branches of the dendrogram. By inspection, the value of 1.12 gave 21 clusters that seem more cohesive in semantics than a lower number of clusters. 
+**Hierarchical Clustering** 
+
+The final method used, Hierarchical clustering, was by far the most creative and entertaining to read. The clusters were very semantically nuanced and developed with themes of tart (dessert tarts, lemon flavoured items (semantically tart as well)), fantasy (dragons, unicorn, devil), alcoholic shots and shooters, location-based (Russian, Brussels, commonwealth, French Canadian), etc. (see example below).
+
+![image](https://github.com/user-attachments/assets/8901b2dd-f749-446c-991d-2e0286008ce8)
+
+Hierarchical clustering iteratively merges the most similar topics first and builds to create more complex groupings using those initial topics. The dendrogram or tree graph below displays the groupings that were ‘pruned’ or limited to the 12 most complex clusters.
 
 ![image](https://github.com/user-attachments/assets/a94c207e-16a7-48fe-891b-d44b59cb4c52)
 
-Hierarchical clustering was by far the most creative and entertaining to read. The clusters were very semantically nuanced and developed. To compare and contrast, the bigger picture indicates that KMeans is good for general/average patters, DBScan is good for finding very specific and nuanced, tight themes, while Hierarchical Clustering is good for finding cohesive semantic meaning. It is the most rich and developed model which is expected given that it has the most robust methods of finding clusters (iteratively, and using vector direction).
+To compare and contrast, the bigger picture indicates that KMeans is good for general/average patterns, DBScan is good for finding very specific and nuanced, tight themes, while Hierarchical Clustering is good for finding cohesive semantic meaning. It is the most rich and developed model which is expected given that it has the most robust methods of finding clusters (iteratively, and using vector direction).
 
 **Caveats**
 
