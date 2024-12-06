@@ -16,13 +16,14 @@ The most common method to compare words to each other is in numerical terms with
 **K-Means Clustering** 
 The first NLP model I used to process the numerical word representation or sentence embedding, divided the text data into evenly spaced ‘clusters’ or groups. I found that the model, KMeans Clustering, created 8 clusters with themes such as location-based (pork chops Madrid, vodka Gilligan island), salad, cake, chicken, cookies, etc. Clearly, KMeans is a good generalizer, with a lot of these themes also popping up in the WordCloud, which logically follows due to its average distance algorithm. The algorithm is based on average center points in order to derive major themes. The number of center points was decided beforehand (explained later under tuning). The model assigns each recipe title to the nearest center point based on the previously created numerical vector representations. The model iteratively adjusts these center points until 8 stable themes are found. 
 
-**K-Means Clustering – Hyperparameter Tuning**
+![image](https://github.com/user-attachments/assets/205ea46d-78c0-4916-a31a-2f2532b58144)
+
+**K-Means Clustering – Hyperparameter Tuning\n**
 I tuned the KMeans hyperparameters using Silhouette and distortion scores to find the optimal number of clusters. A Silhouette Score measures the cohesion of clusters by calculating average distance to other points both within its cluster and its next nearest cluster. The highest score was at k=2 clusters which was not fruitful. In hindsight, using Silhouette Score to optimize the number of clusters was not an ideal method because of the high dimensionality (768 features) of the embedded sentences. 
 Distortion scores measure total squared distance between each point its closest cluster center, which finds tight clusters. The distortion score elbow plot recommended k=8 clusters which did provide fruitful results. Inherently, the distortion score makes more sense in this context for hyper parameter tuning of number of clusters due to it analyzing cluster denseness rather than cluster distance, which is more applicable to higher dimensionality/number of features. 
 
 ![image](https://github.com/user-attachments/assets/9dffa0f7-87f6-49de-91ec-c45536e07801)
 
-![image](https://github.com/user-attachments/assets/205ea46d-78c0-4916-a31a-2f2532b58144)
 
 **DBScan** clusters tuned using k-Nearest Neighbours to find optimal clusters. 
 DBScan was a challenge to tune. I used kNN as it is a common metric to tune DBScan. The first sharp increase is at around 0.4 distance according to the graph. I tried different min samples, and 0.4 was the trend for all. Next, I tried different values of min samples until I got a lower amount of clusters at 11.  
